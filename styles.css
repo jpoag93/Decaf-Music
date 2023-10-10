@@ -5,6 +5,37 @@ html {
     margin: 0;
     padding: 0;
   }
+
+  audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
+    background-color: #634832;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.audio-style{
+  padding-top: 20px;
+  padding-left: 200px;
+}
+
+hr {
+  width: 70%;
+  height: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #634832;
+}
+
   
   *,
   *:before,
@@ -65,14 +96,22 @@ html {
   h1 {
     font-size: 48px;
     text-align: center;
-    color: #f2e0d2;
-    font-family: walter turncoat;
+    color: #634832;
+    font-family: maven pro;
   }
   
   h2 {
     font-family: mossy;
     color: var(--sage-green);
     font-size: 32px;
+  }
+
+  h3 {
+    font-size: 28px;
+    text-align: center;
+    color: #634832;
+    font-family: maven pro;
+
   }
   
   /* NAVIGATION*/
