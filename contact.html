@@ -10,6 +10,12 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <!-- font awesome icons -->
     <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+     <!-- Leaflet: OK to use either downloaded resources or CDN -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="">
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <!-- custom styles -->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="shortcut icon" type="image/png" href="./images/Jayda.png">
@@ -38,6 +44,30 @@
         </nav>
     </header>
 
+    <div class="big">
+        <div class="right">
+            <h1>Ready to connect? Contact us today!</h1>
+
+            <div class="process">
+                <div class="pro">
+                    <h2>Location</h2>
+                    <p class="price cp">Evansville, Indiana</p>
+                </div>
+                <div class="pro">
+                    <h2>Phone Number</h2>
+                    <p class="price"><a class="cp" href="tel:8124842343">(812) 484-2343</a>
+                    </p>
+                </div>
+                <div class="pro">
+                    <h2>Email Address</h2>
+                    <p class="price"><a href="mailto:picsbypoag@gmail.com" class="cp">picsbypoag@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="map" class="mappy"></div>
+    </div>
+
 
     <footer>
         <div class="foot">
@@ -45,6 +75,31 @@
             <p><a href="mailto:picsbypoag@gmail.com" class="cp">picsbypoag@gmail.com</a></p>
         </div>
     </footer>
+
+    <!-- ALSO OK to put activation script into a LEAFLET.JS or MAIN.JS file in JS folder, then link with script tag  -->
+    <script>
+        var map = L.map('map').setView([37.971558, -87.571091], 13);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Add marker at Self E Alley 
+        L.marker([37.97143777707077, -87.57170005733212]).addTo(map)
+            .bindPopup('Self E Alley')
+            .openPopup();
+
+        // Add marker at Joan Marchand Bridge
+        L.marker([37.97635778532284, -87.58825509534869]).addTo(map)
+            .bindPopup('Joan Marchand Bridge')
+            .openPopup();
+
+        // Add marker at Blue Grass Fish & Wildlife Area 
+        L.marker([38.09001649266546, -87.46196547520591]).addTo(map)
+            .bindPopup('Blue Grass Fish & Wildlife Area')
+            .openPopup();
+    </script>
 </body>
 
 </html>
