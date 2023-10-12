@@ -71,8 +71,8 @@
 
     <footer>
         <div class="foot">
-            <p> &copy; Copyright 2022 Pics by Poag ~ All Rights Reserved</p>
-            <p><a href="mailto:picsbypoag@gmail.com" class="cp">picsbypoag@gmail.com</a></p>
+            <p> &copy; Copyright 2023 Decaf Music - All Rights Reserved</p>
+            <!-- <p><a href="mailto:picsbypoag@gmail.com" class="cp">picsbypoag@gmail.com</a></p> -->
         </div>
     </footer>
 
@@ -81,23 +81,13 @@
         var map = L.map('map').setView([37.971558, -87.571091], 13);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
+            maxZoom: 10,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        // Add marker at Self E Alley 
-        L.marker([37.97143777707077, -87.57170005733212]).addTo(map)
-            .bindPopup('Self E Alley')
-            .openPopup();
-
-        // Add marker at Joan Marchand Bridge
-        L.marker([37.97635778532284, -87.58825509534869]).addTo(map)
-            .bindPopup('Joan Marchand Bridge')
-            .openPopup();
-
-        // Add marker at Blue Grass Fish & Wildlife Area 
-        L.marker([38.09001649266546, -87.46196547520591]).addTo(map)
-            .bindPopup('Blue Grass Fish & Wildlife Area')
+        // Add marker at Evansville
+        L.marker([37.971558, -87.571091]).addTo(map)
+            .bindPopup('Evansville, Indiana')
             .openPopup();
     </script>
 </body>

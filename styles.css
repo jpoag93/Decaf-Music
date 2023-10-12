@@ -1,23 +1,35 @@
 /* natural box model */
 html {
-    box-sizing: border-box;
-    background-color: #ffeed1;
-    margin: 0;
-    padding: 0;
-  }
-
-  audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
-    background-color: #634832;
+  box-sizing: border-box;
+  background-color: #ffeed1;
+  margin: 0;
+  padding: 0;
 }
 
-.column {
+audio::-webkit-media-controls-panel,
+video::-webkit-media-controls-panel {
+  background-color: #634832;
+}
+
+/* RESORT TO THIS */
+/* .column {
   float: left;
   width: 50%;
+} */
+
+.column{
+  width: 100%;
+  text-align: center;
 }
 
-.column2 {
+/* RESORT TO THIS */
+/* .column2 {
   float: left;
   width: 33.33%;
+} */
+
+.column2{
+  width: 100%;
 }
 
 /* Clear floats after the columns */
@@ -27,17 +39,26 @@ html {
   clear: both;
 }
 
-h3 > a {
+/* TRYIGN TO FIGURE OUT FLEX */
+/* .row{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+} */
+
+h3>a {
   color: var(--coffee);
 }
-h3 > a:hover {
+
+h3>a:hover {
   color: var(--light-brown);
 }
 
-
-.audio-style{
-  padding-top: 20px;
-  padding-left: 200px;
+/* 20PX */
+.audio-style {
+  padding-top: 0;
+  /* padding-left: 200px; */
+  margin: 0 auto;
 }
 
 hr {
@@ -48,443 +69,825 @@ hr {
   background-color: #634832;
 }
 
-.exerpt{
-  margin: 0 auto; 
+.exerpt {
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  width: 95%;
 }
 
-.contain-text{
+.contain-text {
   width: fit-content;
   white-space: pre-wrap;
   line-height: 1.3em;
   font-family: 'Times New Roman', Times, serif;
 }
 
-.home-img{
+.home-img {
   background-image: url(images/gates.JPG);
-  background-size:cover;
+  background-size: cover;
   height: 500px;
   padding: 0;
   margin: 0;
 }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  
-  /* PAGE THEME COLORS */
-  :root {
-    --coffee: #634832;
-  
-    /* Background Color */
-    --cream: #ffeed1;
-  
-    /* Link Color */
-    --light-brown: #b37a4c;
-  
-    --flower-pink: #f2e0d2;
-  
-    /* light gray from middle flower */
-    --light-gray: #e4dfdc;
-  }
-  
-  /* Fonts
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* PAGE THEME COLORS */
+:root {
+  --coffee: #634832;
+
+  /* Background Color */
+  --cream: #ffeed1;
+
+  /* Link Color */
+  --light-brown: #b37a4c;
+
+  --flower-pink: #f2e0d2;
+
+  /* light gray from middle flower */
+  --light-gray: #e4dfdc;
+}
+
+/* Fonts
   Header - Walter Turncoat
   Subhead - Mossy
   Paragraph - Optima */
-  
-  /* UTILITIES */
-  
-  /* hides an element on screen, but not from screen readers */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    /* overflow: hidden; */
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-  
-  /* no break */
-  .nobr {
-    white-space: nowrap;
-  }
-  
-  /* TYPOGRAPHY */
-  body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.2rem;
 
-    /* THIS MADE THE RANDOM WHITE SPACE GO AWAY AROUND THE HTML */
-    margin: 0;
-    padding: 0;
-  }
-  
-  p {
-    font-family: optima;
-  }
-  
-  h1 {
-    font-size: 48px;
-    text-align: center;
-    color: #634832;
-    font-family: maven pro;
-  }
-  
-  h2 {
-    font-family: maven pro;
-    color: var(--coffee);
-    font-size: 32px;
-    text-align: center;
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  /* overflow: hidden; */
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+/* TYPOGRAPHY */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+
+  /* THIS MADE THE RANDOM WHITE SPACE GO AWAY AROUND THE HTML */
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: optima;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  color: #634832;
+  font-family: maven pro;
+}
+
+h2 {
+  font-family: maven pro;
+  color: var(--coffee);
+  font-size: 32px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 28px;
+  text-align: center;
+  color: #634832;
+  font-family: maven pro;
+
+}
+
+/* NAVIGATION*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+ul ul {
+  margin-left: 2rem;
+  font-size: 80%;
+}
+
+a {
+  color: #FFEED1;
+  text-decoration: none;
+  display: block;
+  font-family: maven pro;
+}
+
+a:hover {
+  color: var(--light-brown);
+}
+
+/* additional hamburger button styles */
+.hamburger,
+.close {
+  font-size: 2rem;
+  color: var(--cream);
+  padding: 1rem;
+}
+
+nav {
+  background-color: #ffeed1;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* positioning the close button and navbar */
+  display: flex;
+  justify-content: center;
+  /* animate slide up/down */
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+  background-color: #634832;
+  padding: 0;
+  margin: 0;
+}
+
+nav:target {
+  transform: translateY(0);
+}
+
+li {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+/* LNN & PEOPLE PAGES */
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  padding: 5px;
+}
+
+.p-head {
+  color: var(--sage-green);
+  font-family: walter turncoat;
+  width: 100%;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+  padding: 0.5rem;
+  background-color: var(--light-brown);
+}
+
+.dropdown-menu li a {
+  color: var(--flower-pink);
+  font-weight: bold;
+}
+
+.dropdown li {
+  padding-bottom: 5px;
+}
+
+.dropdown li:first-child a {
+  text-align: left;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+/* ABOUT PAGE*/
+.con a {
+  font-family: optima;
+  color: var(--cream);
+  display: inline;
+}
+
+
+
+#home {
+  background: url('images/gates.JPG') no-repeat;
+  background-size: cover;
+}
+
+.dots {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+}
+
+.container {
+  background-color: #f2e0d270;
+
+  /* background-image: url(images/gates.JPG); */
+}
+
+.name {
+  font-family: walter turncoat;
+  color: var(--cream);
+}
+
+.line {
+  line-height: 2em;
+}
+
+.line p {
+  font-family: optima;
+  font-size: 24px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.logo {
+  width: 220px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* CONTACT PAGE*/
+.price {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 2em;
+}
+
+#map {
+  height: 500px;
+  margin: 30px;
+}
+
+.cp {
+  font-family: optima;
+  font-size: 20px;
+  color: var(--light-brown);
+}
+
+.start {
+  font-family: walter turncoat;
+  color: var(--sage-green);
+  flex-direction: column;
+}
+
+.fa-square-instagram {
+  font-size: 40px;
+  animation: spin 1.7s;
+}
+
+.big {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .ewrap{
+  display: flex;
+  flex-flow: column;
+} */
+
+/* HOME PAGE */
+.main {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+  margin: 0;
+  padding: 0;
+}
+
+.main2 {
+  width: 100%;
+  height: auto;
+  max-height: 490px;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.good {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+.header {
+  font-family: walter turncoat;
+  background-color: #899b7A;
+  padding: 100px;
+  color: #b37a4c;
+  position: relative;
+  z-index: -1;
+}
+
+/* Home Page Landscape Section */
+.home-lnn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.home-lnn-word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.home-lnn-word p {
+  z-index: 10;
+}
+
+.home-lnn-word a {
+  font-family: walter turncoat;
+  font-size: 48px;
+  color: var(--sage-green);
+}
+
+.home-lnn-word a:hover {
+  color: var(--light-brown);
+}
+
+.palm {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -10000;
+}
+
+.seaweed {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+  z-index: -10000;
+}
+
+/* home page people section */
+.home-people {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  order: 1;
+}
+
+.home-people-word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  order: 1;
+  position: relative;
+}
+
+.home-people-word p {
+  z-index: 10;
+}
+
+.home-people-word a {
+  font-family: walter turncoat;
+  font-size: 48px;
+  color: var(--flower-pink);
+}
+
+.home-people-word a:hover {
+  color: var(--light-brown);
+}
+
+.rose {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transform: scaleX(-1);
+}
+
+.simple {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(180deg);
+  z-index: 1;
+  transform: scaleY(-1);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--coffee);
+  height: 100px;
+  text-align: center;
+}
+
+.foot {
+  padding-top: 20px;
+}
+
+.foot p {
+  font-family: maven pro;
+  color: var(--cream);
+}
+
+/* PRICING */
+.s1 {
+  background-color: var(--sage-green);
+  padding: 30px;
+  margin: 0;
+}
+
+.rosy {
+  width: 100px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.s2 {
+  background-color: var(--flower-pink);
+  padding: 30px;
+  margin: 0;
+}
+
+.s2 h1 {
+  color: var(--sage-green);
+}
+
+.s3 {
+  background-color: var(--light-brown);
+  padding: 30px;
+  margin: 0;
+}
+
+.s3 h1 {
+  color: var(--cream);
+}
+
+.s4 {
+  background-color: var(--cream);
+  padding: 30px;
+  margin: 0;
+}
+
+.s4 h1 {
+  color: var(--light-brown);
+}
+
+.numbers {
+  font-family: mossy;
+  font-size: 42px;
+  color: black;
+}
+
+.cont {
+  color: var(--sage-green);
+  display: inline;
+}
+
+.pro {
+  margin: 0 auto;
+  width: 100%;
+  line-height: 2em;
+}
+
+
+/* ANIMATION*/
+.scale-in-center {
+  -webkit-animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+   * Generated by Animista on 2022-11-29 11:56:59
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info. 
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+
+/**
+   * ----------------------------------------
+   * animation scale-in-center
+   * ----------------------------------------
+   */
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
   }
 
-  h3 {
-    font-size: 28px;
-    text-align: center;
-    color: #634832;
-    font-family: maven pro;
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
   }
-  
-  /* NAVIGATION*/
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1.5rem;
-    align-items: flex-start;
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  ul ul {
-    margin-left: 2rem;
-    font-size: 80%;
+}
+
+.slide-in-top {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+   * Generated by Animista on 2022-11-29 12:0:29
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info. 
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+
+/**
+   * ----------------------------------------
+   * animation slide-in-top
+   * ----------------------------------------
+   */
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
   }
-  
-  a {
-    color: #FFEED1;
-    text-decoration: none;
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Spin the Instagram Icon */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
+/* Extra small devices (portrait phones, less than 576px)
+  No media query for `xs` since this is the default */
+
+/* From dropdown thing */
+@media (min-width: 550px) {
+  nav {
+    background-color: #634832;
+    /* position: static;
+       */
+    position: fixed;
+    width: auto;
+    height: auto;
     display: block;
-    font-family: maven pro;
+    transform: translateY(0);
+    margin: 0;
+    padding: 0;
   }
-  
-  a:hover {
-    color: var(--light-brown);
-  }
-  
-  /* additional hamburger button styles */
+
   .hamburger,
   .close {
-    font-size: 2rem;
-    color: var(--coffee);
-    padding: 1rem;
+    display: none;
   }
-  
-  nav {
-    background-color: #ffeed1;
-    position: absolute;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    /* positioning the close button and navbar */
-    display: flex;
-    justify-content: center;
-    /* animate slide up/down */
-    transform: translateY(-100%);
-    transition: transform 0.2s ease;
-    background-color: #634832;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav:target {
-    transform: translateY(0);
-  }
-  
-  li {
-    margin-right: 20px;
-    margin-left: 20px;
-    font-size: 24px;
-  }
-  
-  /* LNN & PEOPLE PAGES */
-  .gallery {
-    display: flex;
+
+  ul {
+    margin: auto;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
   }
-  
-  img {
-    padding: 5px;
+
+  li:first-child {
+    flex-basis: 100%;
   }
-  
-  .p-head {
-    color: var(--sage-green);
-    font-family: walter turncoat;
-    width: 100%;
+
+  li:first-child a {
+    text-align: center;
   }
-  
-  /* DROPDOWN */
+
+  /* resets from mobile styles */
+  .dropdown li:first-child a {
+    text-align: left;
+  }
+
+  ul ul {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+
+
+
+  /* dropdown styles */
+  /* hide the menu by default */
   .dropdown-menu {
     display: none;
     position: absolute;
-    z-index: 1000;
+    z-index: 100000000;
   }
-  
+
+  /* when hovered over the parent menu item OR the focus is applied, show the dropdown menu */
   .dropdown:hover .dropdown-menu,
   .dropdown:focus-within .dropdown-menu {
     display: block;
     padding: 0.5rem;
     background-color: var(--light-brown);
   }
-  
+
   .dropdown-menu li a {
     color: var(--flower-pink);
     font-weight: bold;
   }
-  
-  .dropdown li {
-    padding-bottom: 5px;
-  }
-  
+
   .dropdown li:first-child a {
     text-align: left;
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 5px;
   }
-  
-  /* ABOUT PAGE*/
-  .con a {
-    font-family: optima;
-    color: var(--cream);
-    display: inline;
-  }
-  
-  
-  
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
   #home {
-    background: url('../images/IMG_0002.JPG') no-repeat;
+    background: url('images/gates.JPG') no-repeat;
     background-size: cover;
   }
-  
-  .dots {
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-  }
-  
-  .container {
-    background-color: #f2e0d270;
-  }
-  
-  .name {
-    font-family: walter turncoat;
-    color: var(--cream);
-  }
-  
-  .line {
-    line-height: 2em;
-  }
-  
-  .line p {
-    font-family: optima;
-    font-size: 24px;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  
-  .logo {
-    width: 220px;
-    margin: 0 auto;
+
+  nav {
+    position: static;
+    width: auto;
+    height: auto;
     display: block;
+    transform: translateY(0);
   }
-  
-  /* CONTACT PAGE*/
-  .price {
-    width: 50%;
+
+  .hamburger,
+  .close {
+    display: none;
+  }
+
+  ul {
+    margin: auto;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  li:first-child {
+    flex-basis: 100%;
+  }
+
+  li:first-child a {
     text-align: center;
-    margin: 0 auto;
-    line-height: 2em;
   }
-  
-  #map {
-    height: 500px;
-    margin: 30px;
+
+  li {
+    margin-bottom: 20px;
   }
-  
-  .cp {
-    font-family: optima;
-    font-size: 20px;
-    color: var(--light-brown);
+
+  .container {
+    width: 100%;
   }
-  
-  .start {
-    font-family: walter turncoat;
-    color: var(--sage-green);
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #home {
+    background: url('../images/IMG_0002\ copy.JPG') no-repeat;
+    background-size: cover;
+  }
+
+  li:first-child {
+    flex-basis: auto;
+    margin-right: auto;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .left {
     flex-direction: column;
   }
-  
-  .fa-square-instagram {
-    font-size: 40px;
-    animation: spin 1.7s;
+
+  #tag {
+    background-color: #FF9900;
   }
-  
-  .big {
+
+  .process {
     display: flex;
-    flex-direction: column;
   }
-  
-  /* HOME PAGE */
-  .main {
-    width: 100%;
-    height: auto;
-    max-height: 550px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .main2 {
-    width: 100%;
-    height: auto;
-    max-height: 490px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .overlay {
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-  }
-  
-  .good {
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(180deg);
-    z-index: -1;
-  }
-  
-  .header {
-    font-family: walter turncoat;
-    background-color: #899b7A;
-    padding: 100px;
-    color: #b37a4c;
-    position: relative;
-    z-index: -1;
-  }
-  
-  /* Home Page Landscape Section */
-  .home-lnn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .home-lnn-word {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    position: relative;
-  }
-  
-  .home-lnn-word p {
-    z-index: 10;
-  }
-  
-  .home-lnn-word a {
-    font-family: walter turncoat;
-    font-size: 48px;
-    color: var(--sage-green);
-  }
-  
-  .home-lnn-word a:hover {
-    color: var(--light-brown);
-  }
-  
+
   .palm {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: -10000;
+    z-index: 1;
   }
-  
+
   .seaweed {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     position: absolute;
     top: 0;
     left: 0;
     transform: rotate(180deg);
-    z-index: -10000;
+    z-index: 1;
   }
-  
-  /* home page people section */
-  .home-people {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    order: 1;
-  }
-  
-  .home-people-word {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    order: 1;
-    position: relative;
-  }
-  
-  .home-people-word p {
-    z-index: 10;
-  }
-  
-  .home-people-word a {
-    font-family: walter turncoat;
-    font-size: 48px;
-    color: var(--flower-pink);
-  }
-  
-  .home-people-word a:hover {
-    color: var(--light-brown);
-  }
-  
+
   .rose {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 1;
     transform: scaleX(-1);
   }
-  
+
   .simple {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     position: absolute;
     top: 0;
     right: 0;
@@ -492,553 +895,241 @@ hr {
     z-index: 1;
     transform: scaleY(-1);
   }
-  
-  /* FOOTER */
-  footer {
-    background-color: var(--coffee);
-    height: 125px;
-    text-align: center;
+
+  .column2 {
+  float: left;
+  width: 33.33%;
+}
+.column{
+  float: left;
+  width: 50%;
+}
+
+.audio-style {
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+#home {
+  background: url('images/gates.JPG') no-repeat;
+  background-size: cover;
+}
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #home {
+    background: url('../images/IMG_0002\ copy.JPG') no-repeat;
+    background-size: cover;
   }
-  
-  .foot {
-    padding-top: 20px;
+
+  .container {
+    width: 50%;
   }
-  
-  .foot p {
-    font-family: maven pro;
-    color: var(--cream);
+
+  #tag {
+    background-color: #00AA88;
   }
-  
-  /* PRICING */
-  .s1 {
-    background-color: var(--sage-green);
-    padding: 30px;
-    margin: 0;
+
+  .process {
+    display: flex;
   }
-  
-  .rosy {
-    width: 100px;
-    height: 150px;
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 30px;
-  }
-  
-  .s2 {
+
+  .lnn {
+    display: flex;
     background-color: var(--flower-pink);
-    padding: 30px;
-    margin: 0;
   }
-  
-  .s2 h1 {
-    color: var(--sage-green);
+
+  .peeps {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--sage-green);
   }
-  
-  .s3 {
-    background-color: var(--light-brown);
-    padding: 30px;
-    margin: 0;
+
+  .palm {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
   }
-  
-  .s3 h1 {
-    color: var(--cream);
+
+  .seaweed {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+    z-index: 1;
   }
-  
-  .s4 {
-    background-color: var(--cream);
-    padding: 30px;
-    margin: 0;
+
+  .rose {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transform: scaleX(-1);
   }
-  
-  .s4 h1 {
-    color: var(--light-brown);
+
+  .simple {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+    transform: scaleY(-1);
   }
-  
-  .numbers {
-    font-family: mossy;
-    font-size: 42px;
-    color: black;
+
+  .overlay {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
   }
-  
-  .cont {
-    color: var(--sage-green);
-    display: inline;
+
+  .good {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+    z-index: -1;
   }
-  
-  .pro {
+
+  .column2 {
+  float: left;
+  width: 33.33%;
+}
+
+.column{
+  float: left;
+  width: 50%;
+}
+
+.audio-style {
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+#home {
+  background: url('images/gates.JPG') no-repeat;
+  background-size: cover;
+}
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #home {
+    background: url('../images/IMG_0002\ copy.JPG') no-repeat;
+    background-size: cover;
+  }
+  .column2 {
+  float: left;
+  width: 33.33%;
+}
+
+  .container {
+    width: 50%;
+  }
+
+  #tag {
+    background-color: #674EA7;
+  }
+
+  .process {
+    display: flex;
+  }
+
+  .lnn {
+    display: flex;
+    background-color: var(--flower-pink);
+  }
+
+  .peeps {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--sage-green);
+  }
+
+  .palm {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .seaweed {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+
+  .rose {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transform: scaleX(-1);
+  }
+
+  .simple {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+    transform: scaleY(-1);
+  }
+
+  .overlay {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .good {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
+
+  .audio-style {
+    padding-top: 20px;
     margin: 0 auto;
-    width: 100%;
-    line-height: 2em;
   }
-  
-  /* ANIMATION*/
-  .scale-in-center {
-    -webkit-animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+  #home {
+    background: url('images/gates.JPG') no-repeat;
+    background-size: cover;
   }
-  
-  /* ----------------------------------------------
-   * Generated by Animista on 2022-11-29 11:56:59
-   * Licensed under FreeBSD License.
-   * See http://animista.net/license for more info. 
-   * w: http://animista.net, t: @cssanimista
-   * ---------------------------------------------- */
-  
-  /**
-   * ----------------------------------------
-   * animation scale-in-center
-   * ----------------------------------------
-   */
-  @-webkit-keyframes scale-in-center {
-    0% {
-      -webkit-transform: scale(0);
-      transform: scale(0);
-      opacity: 1;
-    }
-  
-    100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes scale-in-center {
-    0% {
-      -webkit-transform: scale(0);
-      transform: scale(0);
-      opacity: 1;
-    }
-  
-    100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  .slide-in-top {
-    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  }
-  
-  /* ----------------------------------------------
-   * Generated by Animista on 2022-11-29 12:0:29
-   * Licensed under FreeBSD License.
-   * See http://animista.net/license for more info. 
-   * w: http://animista.net, t: @cssanimista
-   * ---------------------------------------------- */
-  
-  /**
-   * ----------------------------------------
-   * animation slide-in-top
-   * ----------------------------------------
-   */
-  @-webkit-keyframes slide-in-top {
-    0% {
-      -webkit-transform: translateY(-1000px);
-      transform: translateY(-1000px);
-      opacity: 0;
-    }
-  
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slide-in-top {
-    0% {
-      -webkit-transform: translateY(-1000px);
-      transform: translateY(-1000px);
-      opacity: 0;
-    }
-  
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Spin the Instagram Icon */
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-  
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
-  /* Extra small devices (portrait phones, less than 576px)
-  No media query for `xs` since this is the default */
-  
-  /* From dropdown thing */
-  @media (min-width: 550px) {
-    nav {
-      background-color: #634832;
-      /* position: static;
-       */
-      position: fixed;
-      width: auto;
-      height: auto;
-      display: block;
-      transform: translateY(0);
-      margin: 0;
-      padding: 0;
-    }
-  
-    .hamburger,
-    .close {
-      display: none;
-    }
-  
-    ul {
-      margin: auto;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    li:first-child {
-      flex-basis: 100%;
-    }
-  
-    li:first-child a {
-      text-align: center;
-    }
-  
-    /* resets from mobile styles */
-    .dropdown li:first-child a {
-      text-align: left;
-    }
-  
-    ul ul {
-      margin: 0;
-      font-size: 1.2rem;
-    }
-  
-    /* dropdown styles */
-    /* hide the menu by default */
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      z-index: 100000000;
-    }
-  
-    /* when hovered over the parent menu item OR the focus is applied, show the dropdown menu */
-    .dropdown:hover .dropdown-menu,
-    .dropdown:focus-within .dropdown-menu {
-      display: block;
-      padding: 0.5rem;
-      background-color: var(--light-brown);
-    }
-  
-    .dropdown-menu li a {
-      color: var(--flower-pink);
-      font-weight: bold;
-    }
-  
-    .dropdown li:first-child a {
-      text-align: left;
-      padding-top: 10px;
-      padding-right: 10px;
-      padding-bottom: 5px;
-    }
-  }
-  
-  /* Small devices (landscape phones, 576px and up) */
-  @media (min-width: 576px) {
-    #home {
-      background: url('../images/IMG_0002.JPG') no-repeat;
-      background-size: cover;
-    }
-  
-    nav {
-      position: static;
-      width: auto;
-      height: auto;
-      display: block;
-      transform: translateY(0);
-    }
-  
-    .hamburger,
-    .close {
-      display: none;
-    }
-  
-    ul {
-      margin: auto;
-      flex-flow: row wrap;
-      justify-content: center;
-    }
-  
-    li:first-child {
-      flex-basis: 100%;
-    }
-  
-    li:first-child a {
-      text-align: center;
-    }
-  
-    li {
-      margin-bottom: 20px;
-    }
-  
-    .container {
-      width: 100%;
-    }
-  }
-  
-  /* Medium devices (tablets, 768px and up) */
-  @media (min-width: 768px) {
-    #home {
-      background: url('../images/IMG_0002\ copy.JPG') no-repeat;
-      background-size: cover;
-    }
-  
-    li:first-child {
-      flex-basis: auto;
-      margin-right: auto;
-    }
-  
-    .container {
-      width: 100%;
-    }
-  
-    .left {
-      flex-direction: column;
-    }
-  
-    #tag {
-      background-color: #FF9900;
-    }
-  
-    .process {
-      display: flex;
-    }
-  
-    .palm {
-      height: 150px;
-      width: 150px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-    }
-  
-    .seaweed {
-      height: 150px;
-      width: 150px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(180deg);
-      z-index: 1;
-    }
-  
-    .rose {
-      height: 150px;
-      width: 150px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      transform: scaleX(-1);
-    }
-  
-    .simple {
-      height: 150px;
-      width: 150px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: rotate(180deg);
-      z-index: 1;
-      transform: scaleY(-1);
-    }
-  }
-  
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
-    #home {
-      background: url('../images/IMG_0002\ copy.JPG') no-repeat;
-      background-size: cover;
-    }
-  
-    .container {
-      width: 50%;
-    }
-  
-    #tag {
-      background-color: #00AA88;
-    }
-  
-    .process {
-      display: flex;
-    }
-  
-    .lnn {
-      display: flex;
-      background-color: var(--flower-pink);
-    }
-  
-    .peeps {
-      display: flex;
-      flex-direction: row-reverse;
-      background-color: var(--sage-green);
-    }
-  
-    .palm {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-    }
-  
-    .seaweed {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(180deg);
-      z-index: 1;
-    }
-  
-    .rose {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      transform: scaleX(-1);
-    }
-  
-    .simple {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: rotate(180deg);
-      z-index: 1;
-      transform: scaleY(-1);
-    }
-  
-    .overlay {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: -1;
-    }
-  
-    .good {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(180deg);
-      z-index: -1;
-    }
-  }
-  
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {
-    #home {
-      background: url('../images/IMG_0002\ copy.JPG') no-repeat;
-      background-size: cover;
-    }
-  
-    .container {
-      width: 50%;
-    }
-  
-    #tag {
-      background-color: #674EA7;
-    }
-  
-    .process {
-      display: flex;
-    }
-  
-    .lnn {
-      display: flex;
-      background-color: var(--flower-pink);
-    }
-  
-    .peeps {
-      display: flex;
-      flex-direction: row-reverse;
-      background-color: var(--sage-green);
-    }
-  
-    .palm {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-    }
-  
-    .seaweed {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(180deg);
-      z-index: 1;
-    }
-  
-    .rose {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      transform: scaleX(-1);
-    }
-  
-    .simple {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: rotate(180deg);
-      z-index: 1;
-      transform: scaleY(-1);
-    }
-  
-    .overlay {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: -1;
-    }
-  
-    .good {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(180deg);
-      z-index: -1;
-    }
-  }
+}
