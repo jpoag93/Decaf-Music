@@ -5,28 +5,76 @@ html {
   margin: 0;
   padding: 0;
 }
+/* POPUP STUFF */
+
+/* .box {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+/* p {
+  font-size: 17px;
+  align-items: center;
+} */
+/* .box a {
+  display: inline-block;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 3px;
+} */
+.modal {
+  align-items: center;
+  display: flex;
+  justify-content: center; 
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background: rgba(254, 126, 126, 0.7); */
+  /* transition: all 0.4s; */
+  visibility: hidden;
+  opacity: 0;
+
+  z-index: 1;
+}
+.content {
+  position: absolute;
+  background: white;
+  width: 400px;
+  padding: 1em 2em;
+  border-radius: 4px;
+} 
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+.box-close {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  color: var(--coffee);
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* END POPUP */
+
+h2>a{
+  color: var(--coffee);
+}
 
 audio::-webkit-media-controls-panel,
 video::-webkit-media-controls-panel {
   background-color: #634832;
 }
 
-/* RESORT TO THIS */
-/* .column {
-  float: left;
-  width: 50%;
-} */
-
 .column{
   width: 100%;
   text-align: center;
 }
-
-/* RESORT TO THIS */
-/* .column2 {
-  float: left;
-  width: 33.33%;
-} */
 
 .column2{
   width: 100%;
@@ -38,13 +86,6 @@ video::-webkit-media-controls-panel {
   display: table;
   clear: both;
 }
-
-/* TRYIGN TO FIGURE OUT FLEX */
-/* .row{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-} */
 
 h3>a {
   color: var(--coffee);
@@ -88,6 +129,24 @@ hr {
   height: 500px;
   padding: 0;
   margin: 0;
+}
+
+.home-img > h1,h2{
+  padding-top: 15px;
+  margin: 0 auto;
+}
+
+table{
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: maven pro;
+  color: var(--coffee);
+}
+
+td, th{
+margin: 0 auto;
+text-align: center;
+padding: 15px;
 }
 
 *,
@@ -200,10 +259,16 @@ a:hover {
 }
 
 /* additional hamburger button styles */
-.hamburger,
+
 .close {
   font-size: 2rem;
   color: var(--cream);
+  padding: 1rem;
+}
+.hamburger{
+  font-size: 2rem;
+  color: var(--coffee);
+  /* color: #00AA88; */
   padding: 1rem;
 }
 
@@ -311,8 +376,9 @@ img {
 }
 
 .name {
-  font-family: walter turncoat;
+  font-family: maven pro;
   color: var(--cream);
+  padding: 0;
 }
 
 .line {
@@ -320,7 +386,7 @@ img {
 }
 
 .line p {
-  font-family: optima;
+  font-family: maven pro;
   font-size: 24px;
   margin-left: 30px;
   margin-right: 30px;
@@ -338,6 +404,7 @@ img {
   text-align: center;
   margin: 0 auto;
   line-height: 2em;
+
 }
 
 #map {
@@ -346,9 +413,16 @@ img {
 }
 
 .cp {
-  font-family: optima;
+  font-family: maven pro;
   font-size: 20px;
-  color: var(--light-brown);
+  color: var(--cream);
+}
+
+.cp2{
+  font-family: maven pro;
+  font-size: 20px;
+  color: var(--coffee);
+
 }
 
 .start {
@@ -526,7 +600,7 @@ img {
 /* FOOTER */
 footer {
   background-color: var(--coffee);
-  height: 100px;
+  height: 125px;
   text-align: center;
 }
 
@@ -534,9 +608,10 @@ footer {
   padding-top: 20px;
 }
 
-.foot p {
+.foot>p {
   font-family: maven pro;
   color: var(--cream);
+  margin-top: 0;
 }
 
 /* PRICING */
@@ -914,8 +989,6 @@ footer {
   background: url('images/gates.JPG') no-repeat;
   background-size: cover;
 }
-
-
 }
 
 /* Large devices (desktops, 992px and up) */
