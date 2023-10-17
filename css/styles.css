@@ -5,63 +5,14 @@ html {
   margin: 0;
   padding: 0;
 }
-/* POPUP STUFF */
 
-/* .box {
-  background-color: black;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-/* p {
-  font-size: 17px;
-  align-items: center;
-} */
-/* .box a {
-  display: inline-block;
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 3px;
-} */
-.modal {
-  align-items: center;
-  display: flex;
-  justify-content: center; 
-  position:absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* background: rgba(254, 126, 126, 0.7); */
-  /* transition: all 0.4s; */
-  visibility: hidden;
-  opacity: 0;
-
-  z-index: 1;
-}
-.content {
-  position: absolute;
-  background: white;
-  width: 400px;
-  padding: 1em 2em;
-  border-radius: 4px;
-} 
-.modal:target {
-  visibility: visible;
-  opacity: 1;
-}
-.box-close {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  color: var(--coffee);
-  text-decoration: none;
-  font-size: 30px;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-/* END POPUP */
-
+/* MUSIC PAGE */
 h2>a{
   color: var(--coffee);
 }
@@ -95,10 +46,8 @@ h3>a:hover {
   color: var(--light-brown);
 }
 
-/* 20PX */
 .audio-style {
   padding-top: 0;
-  /* padding-left: 200px; */
   margin: 0 auto;
 }
 
@@ -110,9 +59,9 @@ hr {
   background-color: #634832;
 }
 
+/* ESSAY PAGE */
 .exerpt {
   margin: 0 auto;
-  /* border: 1px solid red; */
   width: 95%;
 }
 
@@ -123,8 +72,10 @@ hr {
   font-family: 'Times New Roman', Times, serif;
 }
 
+/* HOME PAGE */
+
 .home-img {
-  background-image: url(images/gates.JPG);
+  background-image: url(../images/gates.JPG);
   background-size: cover;
   height: 500px;
   padding: 0;
@@ -149,14 +100,9 @@ text-align: center;
 padding: 15px;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 /* PAGE THEME COLORS */
 :root {
+  /* Text Colors */
   --coffee: #634832;
 
   /* Background Color */
@@ -164,18 +110,7 @@ padding: 15px;
 
   /* Link Color */
   --light-brown: #b37a4c;
-
-  --flower-pink: #f2e0d2;
-
-  /* light gray from middle flower */
-  --light-gray: #e4dfdc;
 }
-
-/* Fonts
-  Header - Walter Turncoat
-  Subhead - Mossy
-  Paragraph - Optima */
-
 /* UTILITIES */
 
 /* hides an element on screen, but not from screen readers */
@@ -199,14 +134,13 @@ padding: 15px;
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
-
   /* THIS MADE THE RANDOM WHITE SPACE GO AWAY AROUND THE HTML */
   margin: 0;
   padding: 0;
 }
 
 p {
-  font-family: optima;
+  font-family: maven pro;
 }
 
 h1 {
@@ -228,7 +162,41 @@ h3 {
   text-align: center;
   color: #634832;
   font-family: maven pro;
+}
 
+/* POPUP STUFF */
+.modal {
+  align-items: center;
+  display: flex;
+  justify-content: center; 
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+
+.content {
+  position: absolute;
+  background: white;
+  width: 400px;
+  padding: 1em 2em;
+  border-radius: 4px;
+} 
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+.box-close {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  color: var(--coffee);
+  text-decoration: none;
+  font-size: 30px;
 }
 
 /* NAVIGATION*/
@@ -301,7 +269,7 @@ li {
   font-size: 24px;
 }
 
-/* LNN & PEOPLE PAGES */
+/* MEDIA PAGE */
 .gallery {
   display: flex;
   flex-flow: row wrap;
@@ -311,12 +279,6 @@ li {
 
 img {
   padding: 5px;
-}
-
-.p-head {
-  color: var(--sage-green);
-  font-family: walter turncoat;
-  width: 100%;
 }
 
 /* DROPDOWN */
@@ -356,10 +318,8 @@ img {
   display: inline;
 }
 
-
-
 #home {
-  background: url('images/gates.JPG') no-repeat;
+  background: url('../images/gates.JPG') no-repeat;
   background-size: cover;
 }
 
@@ -371,7 +331,6 @@ img {
 
 .container {
   background-color: #f2e0d270;
-
   /* background-image: url(images/gates.JPG); */
 }
 
@@ -404,7 +363,6 @@ img {
   text-align: center;
   margin: 0 auto;
   line-height: 2em;
-
 }
 
 #map {
@@ -422,179 +380,11 @@ img {
   font-family: maven pro;
   font-size: 20px;
   color: var(--coffee);
-
-}
-
-.start {
-  font-family: walter turncoat;
-  color: var(--sage-green);
-  flex-direction: column;
-}
-
-.fa-square-instagram {
-  font-size: 40px;
-  animation: spin 1.7s;
 }
 
 .big {
   display: flex;
   flex-direction: column;
-}
-
-/* .ewrap{
-  display: flex;
-  flex-flow: column;
-} */
-
-/* HOME PAGE */
-.main {
-  width: 100%;
-  height: auto;
-  max-height: 550px;
-  margin: 0;
-  padding: 0;
-}
-
-.main2 {
-  width: 100%;
-  height: auto;
-  max-height: 490px;
-  margin: 0;
-  padding: 0;
-}
-
-.overlay {
-  height: 150px;
-  width: 150px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-}
-
-.good {
-  height: 150px;
-  width: 150px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(180deg);
-  z-index: -1;
-}
-
-.header {
-  font-family: walter turncoat;
-  background-color: #899b7A;
-  padding: 100px;
-  color: #b37a4c;
-  position: relative;
-  z-index: -1;
-}
-
-/* Home Page Landscape Section */
-.home-lnn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-}
-
-.home-lnn-word {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  position: relative;
-}
-
-.home-lnn-word p {
-  z-index: 10;
-}
-
-.home-lnn-word a {
-  font-family: walter turncoat;
-  font-size: 48px;
-  color: var(--sage-green);
-}
-
-.home-lnn-word a:hover {
-  color: var(--light-brown);
-}
-
-.palm {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -10000;
-}
-
-.seaweed {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(180deg);
-  z-index: -10000;
-}
-
-/* home page people section */
-.home-people {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  order: 1;
-}
-
-.home-people-word {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  order: 1;
-  position: relative;
-}
-
-.home-people-word p {
-  z-index: 10;
-}
-
-.home-people-word a {
-  font-family: walter turncoat;
-  font-size: 48px;
-  color: var(--flower-pink);
-}
-
-.home-people-word a:hover {
-  color: var(--light-brown);
-}
-
-.rose {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  transform: scaleX(-1);
-}
-
-.simple {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: rotate(180deg);
-  z-index: 1;
-  transform: scaleY(-1);
 }
 
 /* FOOTER */
@@ -614,67 +404,11 @@ footer {
   margin-top: 0;
 }
 
-/* PRICING */
-.s1 {
-  background-color: var(--sage-green);
-  padding: 30px;
-  margin: 0;
-}
-
-.rosy {
-  width: 100px;
-  height: 150px;
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 30px;
-}
-
-.s2 {
-  background-color: var(--flower-pink);
-  padding: 30px;
-  margin: 0;
-}
-
-.s2 h1 {
-  color: var(--sage-green);
-}
-
-.s3 {
-  background-color: var(--light-brown);
-  padding: 30px;
-  margin: 0;
-}
-
-.s3 h1 {
-  color: var(--cream);
-}
-
-.s4 {
-  background-color: var(--cream);
-  padding: 30px;
-  margin: 0;
-}
-
-.s4 h1 {
-  color: var(--light-brown);
-}
-
-.numbers {
-  font-family: mossy;
-  font-size: 42px;
-  color: black;
-}
-
-.cont {
-  color: var(--sage-green);
-  display: inline;
-}
-
 .pro {
   margin: 0 auto;
   width: 100%;
   line-height: 2em;
-}
+} 
 
 
 /* ANIMATION*/
@@ -768,27 +502,12 @@ footer {
   }
 }
 
-/* Spin the Instagram Icon */
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
 /* Extra small devices (portrait phones, less than 576px)
   No media query for `xs` since this is the default */
-
-/* From dropdown thing */
 @media (min-width: 550px) {
   nav {
     background-color: #634832;
-    /* position: static;
-       */
     position: fixed;
     width: auto;
     height: auto;
@@ -828,9 +547,6 @@ footer {
     font-size: 1.2rem;
   }
 
-
-
-
   /* dropdown styles */
   /* hide the menu by default */
   .dropdown-menu {
@@ -863,7 +579,7 @@ footer {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   #home {
-    background: url('images/gates.JPG') no-repeat;
+    background: url('../images/gates.JPG') no-repeat;
     background-size: cover;
   }
 
@@ -923,52 +639,8 @@ footer {
     flex-direction: column;
   }
 
-  #tag {
-    background-color: #FF9900;
-  }
-
   .process {
     display: flex;
-  }
-
-  .palm {
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-  }
-
-  .seaweed {
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(180deg);
-    z-index: 1;
-  }
-
-  .rose {
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    transform: scaleX(-1);
-  }
-
-  .simple {
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: rotate(180deg);
-    z-index: 1;
-    transform: scaleY(-1);
   }
 
   .column2 {
@@ -986,7 +658,7 @@ footer {
 }
 
 #home {
-  background: url('images/gates.JPG') no-repeat;
+  background: url('../images/gates.JPG') no-repeat;
   background-size: cover;
 }
 }
@@ -1002,82 +674,8 @@ footer {
     width: 50%;
   }
 
-  #tag {
-    background-color: #00AA88;
-  }
-
   .process {
     display: flex;
-  }
-
-  .lnn {
-    display: flex;
-    background-color: var(--flower-pink);
-  }
-
-  .peeps {
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: var(--sage-green);
-  }
-
-  .palm {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-  }
-
-  .seaweed {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(180deg);
-    z-index: 1;
-  }
-
-  .rose {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    transform: scaleX(-1);
-  }
-
-  .simple {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: rotate(180deg);
-    z-index: 1;
-    transform: scaleY(-1);
-  }
-
-  .overlay {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-  }
-
-  .good {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(180deg);
-    z-index: -1;
   }
 
   .column2 {
@@ -1096,11 +694,9 @@ footer {
 }
 
 #home {
-  background: url('images/gates.JPG') no-repeat;
+  background: url('../images/gates.JPG') no-repeat;
   background-size: cover;
 }
-
-
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -1118,82 +714,8 @@ footer {
     width: 50%;
   }
 
-  #tag {
-    background-color: #674EA7;
-  }
-
   .process {
     display: flex;
-  }
-
-  .lnn {
-    display: flex;
-    background-color: var(--flower-pink);
-  }
-
-  .peeps {
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: var(--sage-green);
-  }
-
-  .palm {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-  }
-
-  .seaweed {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(180deg);
-    z-index: 1;
-  }
-
-  .rose {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    transform: scaleX(-1);
-  }
-
-  .simple {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: rotate(180deg);
-    z-index: 1;
-    transform: scaleY(-1);
-  }
-
-  .overlay {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-  }
-
-  .good {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(180deg);
-    z-index: -1;
   }
 
   .audio-style {
@@ -1202,7 +724,7 @@ footer {
   }
 
   #home {
-    background: url('images/gates.JPG') no-repeat;
+    background: url('../images/gates.JPG') no-repeat;
     background-size: cover;
   }
 }
