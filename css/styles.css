@@ -59,6 +59,14 @@ hr {
   background-color: #634832;
 }
 
+.lyric a{
+  color: red;
+}
+
+.lyric a:hover {
+  color: rgba(255, 0, 0, .5);
+}
+
 /* ESSAY PAGE */
 .exerpt {
   margin: 0 auto;
