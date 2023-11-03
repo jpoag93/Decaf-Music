@@ -60,11 +60,11 @@ hr {
 }
 
 .lyric a{
-  color: red;
+  color: var(--brick);
 }
 
 .lyric a:hover {
-  color: rgba(255, 0, 0, .5);
+  color: rgba(187,71,31,.5);
 }
 
 /* ESSAY PAGE */
@@ -83,23 +83,36 @@ hr {
 /* HOME PAGE */
 
 .home-img {
-  background-image: url(../images/gates.JPG);
+  /* background-image: url(../images/gates.JPG); */
   background-size: cover;
   height: 500px;
   padding: 0;
   margin: 0;
+
+  background-color: var(--brick);
 }
 
 .home-img > h1,h2{
   padding-top: 15px;
   margin: 0 auto;
+  padding: 30px;
+  color: var(--cream);
+}
+
+.home-img > h2 {
+  color: var(--cream);
 }
 
 table{
   margin: 0 auto;
+  margin-top: 50px;
   padding-top: 15px;
+  padding-bottom: 15px;
   font-family: maven pro;
   color: var(--coffee);
+  /* background-color: rgba(255, 255, 255, .5); */
+  background-color: rgba(255, 238, 209, .5);
+
 }
 
 td, th{
@@ -118,6 +131,9 @@ padding: 15px;
 
   /* Link Color */
   --light-brown: #b37a4c;
+
+  /* Accent Color */
+  --brick: #Bb471f;
 }
 /* UTILITIES */
 
@@ -224,23 +240,26 @@ ul ul {
 }
 
 a {
-  color: #FFEED1;
+  /* color: #FFEED1; */
+  color: #634832;
   text-decoration: none;
   display: block;
   font-family: maven pro;
 }
 
 a:hover {
-  color: var(--light-brown);
+  color: var(--brick);
 }
 
 /* additional hamburger button styles */
 
 .close {
   font-size: 2rem;
-  color: var(--cream);
+  /* color: var(--cream); */
+  color: var(--coffee);
   padding: 1rem;
 }
+
 .hamburger{
   font-size: 2rem;
   color: var(--coffee);
@@ -262,7 +281,7 @@ nav {
   /* animate slide up/down */
   transform: translateY(-100%);
   transition: transform 0.2s ease;
-  background-color: #634832;
+  /* background-color: #634832; */
   padding: 0;
   margin: 0;
 }
@@ -327,8 +346,10 @@ img {
 }
 
 #home {
-  background: url('../images/gates.JPG') no-repeat;
+  background: url('../images/porch.jpeg') no-repeat;
   background-size: cover;
+
+  /* background-color: var(--brick); */
 }
 
 .dots {
@@ -338,13 +359,14 @@ img {
 }
 
 .container {
-  background-color: #f2e0d270;
+  /* background-color: #f2e0d270; */
+  background-color: rgba(255, 238, 209, .5);
   /* background-image: url(images/gates.JPG); */
 }
 
 .name {
   font-family: maven pro;
-  color: var(--cream);
+  color: var(--brick);
   padding: 0;
 }
 
@@ -515,7 +537,8 @@ footer {
   No media query for `xs` since this is the default */
 @media (min-width: 550px) {
   nav {
-    background-color: #634832;
+    /* background-color: #634832; */
+    background-color: var(--cream);
     position: fixed;
     width: auto;
     height: auto;
@@ -587,8 +610,11 @@ footer {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   #home {
-    background: url('../images/gates.JPG') no-repeat;
+    /* background: url('../images/gates.JPG') no-repeat; */
     background-size: cover;
+
+    background-color: var(--brick);
+
   }
 
   nav {
@@ -629,11 +655,6 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #home {
-    background: url('../images/IMG_0002\ copy.JPG') no-repeat;
-    background-size: cover;
-  }
-
   li:first-child {
     flex-basis: auto;
     margin-right: auto;
@@ -666,18 +687,16 @@ footer {
 }
 
 #home {
-  background: url('../images/gates.JPG') no-repeat;
+  /* background: url('../images/gates.JPG') no-repeat; */
   background-size: cover;
+
+  background-color: var(--brick);
+
 }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  #home {
-    background: url('../images/IMG_0002\ copy.JPG') no-repeat;
-    background-size: cover;
-  }
-
   .container {
     width: 50%;
   }
@@ -702,17 +721,16 @@ footer {
 }
 
 #home {
-  background: url('../images/gates.JPG') no-repeat;
+  /* background: url('../images/gates.JPG') no-repeat; */
   background-size: cover;
+
+  background-color: var(--brick);
+
 }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #home {
-    background: url('../images/IMG_0002\ copy.JPG') no-repeat;
-    background-size: cover;
-  }
   .column2 {
   float: left;
   width: 33.33%;
@@ -732,7 +750,9 @@ footer {
   }
 
   #home {
-    background: url('../images/gates.JPG') no-repeat;
+    /* background: url('../images/gates.JPG') no-repeat; */
     background-size: cover;
+
+    background-color: var(--brick);
   }
 }
